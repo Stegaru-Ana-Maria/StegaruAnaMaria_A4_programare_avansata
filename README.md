@@ -1,1 +1,3 @@
-# StegaruAnaMaria_A4_programare_avansata
+Stegaru Ana Maria
+grupa 2A4
+programare avansata
