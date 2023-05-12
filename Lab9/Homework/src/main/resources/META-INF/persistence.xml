@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence">
+
+    <persistence-unit name="myPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>com.example.Artist</class>
+        <class>com.example.Album</class>
+        <class>com.example.Genre</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mydatabase"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="password"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="eclipselink.logging.level" value="INFO"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+
+     <!--
+        <?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+<persistence-unit name="myPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.example.Album</class>
+    <properties>
+        <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mydatabase"/>
+        <property name="javax.persistence.jdbc.user" value="username"/>
+        <property name="javax.persistence.jdbc.password" value="password"/>
+        <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="eclipselink.ddl-generation" value="create-tables"/>
+        <property name="eclipselink.logging.level" value="INFO"/>
+    </properties>
+</persistence-unit>
+</persistence>
+
+     -->
